@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 🔹 Background & General Styling */
+.home-container {
+    background: linear-gradient(135deg, #141e30, #243b55); /* Modern gradient */
+    font-family: "Poppins", serif;
+    min-height: 100vh;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+/* 🔹 Headings */
+.home-container h1 {
+    font-size: 35px;
+}
+
+.home-container h2 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.home-container h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    color: #ffcc00;
+}
+
+/* 🔹 Highlighted Text */
+.home-container b {
+    color: gold;
+}
+
+.home-container span {
+    color: violet;
+    font-size: 45px;
+}
+
+/* 🔹 Info Box with Clean Styling */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08); /* Light transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 30px auto;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Image Styling */
+.info-box img {
+    width: 100%;
+    max-width: 400px; /* Adjusted for better layout */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 4px solid #ffcc00;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.info-box:hover img {
+    transform: rotate(3deg) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* 🔹 Text Styling */
+.info-box p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 750px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+/* 🔹 General Button Styling */
+.home-container button, .download-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #ffcc00, #ff8800);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    text-align: center;
+}
+
+/* 🔹 Hover Effect for Buttons */
+.home-container button:hover, .download-btn:hover {
+    background: linear-gradient(90deg, #ff8800, #ffcc00);
+    transform: scale(1.08);
+}
+
+/* 🔹 Download Poster Button Styling */
+.download-btn {
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 14px 30px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* 🔹 Launch Gallery */
+.launch-gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* 🔹 High-Quality Image Styling */
+.launch-gallery img {
+    width: 30%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    image-rendering: high-quality;
+}
+
+/* 🔹 Hover Effect */
+.launch-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Mobile Responsive */
+@media (max-width: 768px) {
+    .info-box {
+        padding: 20px;
+    }
+
+    .info-box img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .info-box p {
+        font-size: 16px;
+    }
+
+    .info-box button, .download-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .launch-gallery img {
+        width: 90%; /* Larger images for better clarity */
+        max-height: 300px;
+    }
+}
+
+/* 🔹 Desktop High-Quality Fix */
+@media (min-width: 1024px) {
+    .launch-gallery img {
+        width: 25%;
+        max-height: 400px;
+    }
+}
